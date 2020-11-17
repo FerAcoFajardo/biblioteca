@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render,redirect
 from .forms import AutorForm
 # Create your views here.
 def Home(request):
@@ -11,6 +11,6 @@ def crearAutor(request):
             autor_form.save()
             return redirect('home')
     else:
-        autor_form = AutorForm(request)
+        autor_form = AutorForm()
 
     return render(request,'libro/crear_autor.html',{'autor_form':autor_form})
