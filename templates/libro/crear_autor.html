@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
 {% block titulo %}
-Creción de usuario
+Creación de usuario
 {% endblock titulo %}
 
 {% block body %}
@@ -9,10 +9,8 @@ Creción de usuario
         {% if error %}
             <h2>{{error}}</h2>
         {% else %}
-        {{ autor_form.as_p }}
-        <button type="submit">Crear</button>
+            {{ autor_form.as_p }}
+            <button type="submit">Enviar</button>
         {% endif %}
-        
-        
     </form>
 {% endblock body %}

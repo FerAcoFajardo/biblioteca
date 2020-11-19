@@ -14,9 +14,11 @@
                 <th>Apellidos</th>
                 <th>Nacionalidad</th>
                 <th>Descripción</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
+            <a href="{% url 'libro:crear_autor'  %}">Crear nuevo usuario</a>
             {% for autor in autores %}
                 <tr>
                     <td>{{autor.id}}</td>
@@ -24,6 +26,10 @@
                     <td>{{autor.apellidos}}</td>
                     <td>{{autor.nacionalidad}}</td>
                     <td>{{autor.descripcion}}</td>
+                    <td>
+                        <a href="{% url 'libro:editar_autor' autor.id %}">Editar</a>
+                        <a href="{% url 'libro:eliminar_autor' autor.id %}">Eliminar</a>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
