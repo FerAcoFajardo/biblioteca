@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>
+        {% block titulo %}
+            Index
+        {% endblock titulo %}
+    </title>
+    {% block extrascss %}
+    {% endblock extrascss %}
 </head>
-<body>
-    <h1>Este es el index de mi proyecto</h1>
-</body>
+    <body>
+        {% block body %}
+            <h1>Este es el index de mi proyecto</h1>
+        {% endblock body %}
+        {% block extrajs %}
+        {% endblock extrajs %}
+    </body>
 </html>
